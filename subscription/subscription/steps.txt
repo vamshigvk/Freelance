@@ -1,0 +1,53 @@
+https://docs.djangoproject.com/en/3.1/intro/tutorial01/
+
+django-admin startproject subscription
+python manage.py runserver
+http://127.0.0.1:8000/
+python manage.py runserver 8080
+python manage.py runserver 0:8000
+
+python manage.py startapp polls
+''' polls/views.py
+from django.http import HttpResponse
+def index(request):
+    return HttpResponse("Hello, world. You're at the polls index.")
+'''
+
+'''polls/urls.py
+from django.urls import path
+
+from . import views
+
+urlpatterns = [
+    path('', views.index, name='index'),
+]'''
+
+'''subscription/urls.py
+from django.contrib import admin
+from django.urls import include, path
+
+urlpatterns = [
+    path('polls/', include('polls.urls')),
+    path('admin/', admin.site.urls),
+]'''
+
+
+python manage.py runserver
+https://medium.com/analytics-vidhya/how-to-build-a-django-membership-site-with-payment-integration-part-1-163552292aed
+
+python manage.py startapp membership
+
+python manage.py migrate
+
+python manage.py createsuperuser
+
+http://127.0.0.1:8000/admin/
+
+python manage.py makemigrations
+
+python manage.py migrate
+
+stripe API key:  sk_test_51IQ71aBu0ls7BzPj7BVweKmffiSjfs3kzaaTx5xGQJpNZplCh5rfQWlng9qELXJGNBFcChosVCIn9ekiR3LZ40cb00nCRRv5O3
+
+stripe publishable key : pk_test_51IQ71aBu0ls7BzPjhArTMJp9TlreIU5G8RjBP8ZQGvU4kCcBAZw8c92mfUTvYJc62m7C47HcKYrpP0NRBAvoZFgb00x71BSHKf
+
